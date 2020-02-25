@@ -9,6 +9,7 @@ const app = express();
 mongoose.connect('mongodb://localhost/GestorUsuarios', { useNewUrlParser: true })
 .then(db => console.log('Conexion a DB exitosa'))
 .catch(err => console.log(err));
+//var db = 'mongodb://<carlos>:<carlos1>@ds139768.mlab.com:39768/rectorado';
 
 mongoose.set('useUnifiedTopology', true);
 

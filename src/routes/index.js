@@ -39,17 +39,29 @@ router.get('/edit/:id', async(req, res) =>{
 });
 
 router.post('/edit/:id', async (req, res) => {
+	
 	const {id} = req.params;
-	await Task.update({_id: id}, req.body);
+	const task = new Task(req.body);
+	if (task.title != '' && task.description != '') {
+		await Task.update({_id: id}, req.body);
+	}else{
+		console.log("No hay datos");
+	}
 	res.redirect('/');
 });
 
 router.get('/delete/:id', async (req, res) =>{
 	
 	const {id} = req.params;
-	await Task.remove({_id: id});
+	
+		await Task.remove({_id: id});
+	
+	
 	res.redirect('/');
 });
+
+
+
 
 module.exports = router;
 
