@@ -1,0 +1,28 @@
+ <%- include ('partials/_header'); %>
+
+<div class="container">
+	<div class="row">
+		<!--Formulario-->
+				
+				<div class="col-md-5 offset-md-3">
+					<div class="card">
+						<div class="card-body">
+							<h2>Acualización de lista</h2>
+							<form action="/edit/<%=task._id%>" method="POST">
+								<div class="form-group">
+									<input type="text" name="title" class="form-control" autocomplete="off" value="<%=task.title%>">
+								</div>
+								<div class="form-group">
+									<textarea name="description" cols="80" class="form-control"><%= task.description%></textarea>
+								</div>
+								<button type="submit" class="btn btn-primary btn-block">
+									Actualizar
+								</button>
+							</form>
+						</div>
+					</div>
+				</div>
+	</div>
+</div>
+
+<%- include ('partials/_footer'); %>

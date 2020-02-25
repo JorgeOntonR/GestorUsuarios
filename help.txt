@@ -1,0 +1,5 @@
+express: framework para node
+mongoose: para trabajar con mongoDB
+ejs: motor de plantilla (vista)
+morgan: modulo para ver por consola algunas cosas
+nodemon: 
